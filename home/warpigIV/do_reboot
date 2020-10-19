@@ -1,0 +1,16 @@
+#!/bin/sh
+##########################
+# do_reboot - APRS-COMMANDED REBOOT for Warpig-13 (was for APRS-commanded reboot, but since Warpig-13
+#             doesn't have an APRS receiver, won't matter if this isn't the "official" version....
+#
+##########################
+
+# Sleep 10 seconds and reboot Pi
+sleep 10
+
+echo
+echo "Performing a commanded reboot at "`date`
+echo
+
+sudo reboot
+

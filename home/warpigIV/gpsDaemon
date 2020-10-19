@@ -1,0 +1,33 @@
+#!/bin/sh
+##################
+# gpsDaemon - Script intended to be launched in the background, and which
+#             repeatedly refreshes the last-known-good position (LAT/LON/ALT)
+#             data stored on the filesystem for other programs to pick up later.
+#
+# HISTORICAL INFORMATION -
+#
+#  2018-01-21  msipin  Created
+#  2018-02-10  msipin  Moved delay out of error condition, and just always do it.
+#  2019-04-29  msipin  Adjusted to the fact that GPSD has now taken over reading from
+#                      the GPS serial port.
+#################
+
+# NEW FOR GPSD -
+# Give GPSD time to start up
+sleep 20
+
+
+while [ 1 ]
+do
+    NOW=`date '+%Y-%m-%d,%H:%M:%S'`
+    WHERE=`do_gps`
+    if [ $? -eq 0 ]
+    then
+	echo "${WHERE},${NOW}"
+    else
+    	echo "Error: GPS_ERROR at $NOW"
+    fi
+    sleep 10
+done
+
+exit 0

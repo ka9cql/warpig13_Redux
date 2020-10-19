@@ -1,0 +1,41 @@
+
+
+TO-DO list:
+
+** CHANGE THE TELEMETRY-REPORTING IP ADDRESS TO YOUR TELEMETRY-COLLECTOR ADDRESS!!
+
+** WE CHANGED THE TEMP SENSORS TO 1-WIRE: YOU *MUST* enable 1-wire in the kernel,
+   set pin used (e.g. GPIO 5) in /boot/config.txt, and then set the DEV_INSIDE,
+   DEV_OUTSIDE and (optionally) DEV_BATTERY paths to your own device's *UNIQUE*
+   serial numbers!!
+
+** I DISABLED USB-Ethernet (USB-OTG) because I was having trouble with aplay locking
+   up the Syba USB sound card used with 2-way commanding (through direwolf + kissutil)
+
+
+CHANGE THE GPU-to-CPU MEMORY ALLOCATON TO "all CPU"
+
+INCORPORATE THE GPS-DERIVED TIME (instead of NTP) TO SET THE SYSTEM CLOCK
+    IN THE MEAN TIME: SET THE TIME MANUALLY if no NTP server is reachable upon power-up
+
+DELETE THE /etc/wpa_supplicant/wpa_supplicant.conf.**NET FILE
+
+ENSURE that the wpa_supplicant.conf.OPEN file is being used by issuing this command -
+
+       cp /etc/wpa_supplicant/wpa_supplicant.conf.OPEN /etc/wpa_supplicant/wpa_supplicant.conf
+
+ERASE all "replay-protection" APRS message-ID numbers from the /usr/local/bin/seen directory
+
+Start sending telemetry via Internet
+
+Start sending APRS packets out via USB soundcard + KJ6FO I/F + GPIO 21 PTT + Baofeng 888
+
+MODIFY (or delete) the /etc/motd file that contains these instructions (IF MODIFY - add contact info?)
+
+
+ENSURE THAT THE CAMERA DAEMON IS RUNNING!!!
+ENSURE THAT THE CAMERA DAEMON IS RUNNING!!!
+
+ENSURE THAT THE CAMERA DAEMON IS RUNNING!!!
+ENSURE THAT THE CAMERA DAEMON IS RUNNING!!!
+
