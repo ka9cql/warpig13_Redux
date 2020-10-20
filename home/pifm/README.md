@@ -1,15 +1,5 @@
 ## Turning the Raspberry Pi Zero W Into an APRS Transmitter
 
-### Notes
-
-This is a copy of the original material from 
-http://www.icrobotics.co.uk/wiki/index.php/Turning_the_Raspberry_Pi_Into_an_FM_Transmitter, 
-
-The changes here have been made in order to adapt this project for both the Pi Zero W, and for transmitting APRS on United States 2 meter ham radio frequencies.
-
-NOTE: YOU CAN NOT USE THIS CODE UNLESS YOU ARE A LICENSED AMATEUR RADIO OPERATOR with operating privileges in the US 2 meter ham radio band.  PERIOD!
-
-All rights of the original authors reserved.
 
 ### References
 
