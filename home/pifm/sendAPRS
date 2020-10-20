@@ -58,8 +58,7 @@ do
 	# Altitude-based inter-announcement delay -
 	# Transmit QUICKER if balloon is below 10,000 ft (3,048 meters) and slower if above
 
-	#if [ ""$alt"" -lt 3048 ]
-	if [ 0 = 1 ]
+	if [ ""$alt"" -lt 3048 ]
 	then
 		# Balloon is ascending or descending, so REPEAT MORE QUICKLY!
 		sleep 27
